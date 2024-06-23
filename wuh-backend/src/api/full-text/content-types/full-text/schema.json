@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "full_texts",
+  "info": {
+    "singularName": "full-text",
+    "pluralName": "full-texts",
+    "displayName": "Full Text"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SubscriptionBased": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "resource": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::resource.resource",
+      "inversedBy": "full_texts"
+    }
+  }
+}

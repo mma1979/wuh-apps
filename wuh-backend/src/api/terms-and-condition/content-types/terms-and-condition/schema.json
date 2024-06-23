@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terms_and_conditions",
+  "info": {
+    "singularName": "terms-and-condition",
+    "pluralName": "terms-and-conditions",
+    "displayName": "Terms and Conditions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "CitationRequirementDetails": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "ConcurrentUsers": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "DataMining": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "DigitalCopyNotes": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "GeneralAdditionalNotes": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "AuthorizedUsers": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "OtherUseRestrictionNotes": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "PrintCopyNotes": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "ScholarlySharingNotes": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "resource": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::resource.resource",
+      "inversedBy": "terms_and_conditions"
+    }
+  }
+}

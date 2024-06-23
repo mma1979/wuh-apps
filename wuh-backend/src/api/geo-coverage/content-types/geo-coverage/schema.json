@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "geo_coverages",
+  "info": {
+    "singularName": "geo-coverage",
+    "pluralName": "geo-coverages",
+    "displayName": "GeoCoverage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Lat": {
+      "type": "float"
+    },
+    "Lng": {
+      "type": "float"
+    },
+    "resource": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::resource.resource",
+      "inversedBy": "geo_coverages"
+    }
+  }
+}

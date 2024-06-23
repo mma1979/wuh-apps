@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technical_usages",
+  "info": {
+    "singularName": "technical-usage",
+    "pluralName": "technical-usages",
+    "displayName": "Technical Usage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "string"
+    },
+    "Url": {
+      "type": "string"
+    },
+    "resource": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::resource.resource",
+      "inversedBy": "technical_usages"
+    }
+  }
+}

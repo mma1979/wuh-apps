@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "access_types",
+  "info": {
+    "singularName": "access-type",
+    "pluralName": "access-types",
+    "displayName": "Access Types",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource.resource",
+      "mappedBy": "access_type"
+    }
+  }
+}

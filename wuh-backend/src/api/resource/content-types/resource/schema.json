@@ -1,0 +1,136 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resources",
+  "info": {
+    "singularName": "resource",
+    "pluralName": "resources",
+    "displayName": "Resources",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Publisher": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Link": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "access_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::access-type.access-type",
+      "inversedBy": "resources"
+    },
+    "full_texts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::full-text.full-text",
+      "mappedBy": "resource"
+    },
+    "terms_and_conditions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::terms-and-condition.terms-and-condition",
+      "mappedBy": "resource"
+    },
+    "technical_usages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technical-usage.technical-usage",
+      "mappedBy": "resource"
+    },
+    "literature_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::literature-type.literature-type",
+      "inversedBy": "resources"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "resource"
+    },
+    "EDS_Indexed": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "HasRemoteAccess": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "Proxy": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "OpenAthens": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "geo_coverages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::geo-coverage.geo-coverage",
+      "mappedBy": "resource"
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language.language",
+      "mappedBy": "resource"
+    }
+  }
+}
